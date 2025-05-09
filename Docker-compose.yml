@@ -16,7 +16,7 @@ services:
   tp-foyer:
     depends_on:
       - mysqldb
-    image: arijhakouna/xxxx
+    image: arijhakouna/tpfoyer
     restart : always 
     ports:
       - 8089:8089
@@ -27,8 +27,8 @@ services:
         "spring.datasource.password" : "",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",        
         "spring.jpa.hibernate.ddl-auto" : "update" }'
-      stdin_open: true
-      tty: true
+    stdin_open: true
+    tty: true
 
 volumes:
 db : 
